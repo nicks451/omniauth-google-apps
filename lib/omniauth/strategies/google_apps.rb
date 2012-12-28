@@ -10,7 +10,7 @@ module OmniAuth
       def get_identifier
         f = OmniAuth::Form.new(:title => 'Google Apps Authentication')
         f.label_field('Google Apps Domain', 'domain')
-        f.select_tag('domain', options_for_select([['Dedo', 'dedoinc.com'], ['Miller & Associates', 'mmillerassociates.com']]))
+        f.select_tag('domain', "<option value='dedoinc.com'>Dedo</option><option value='mmillerassociates.com'>Miller And Associates</option>")
         f.to_response
       end
 
